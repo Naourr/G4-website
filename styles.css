@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+:root {
+    --bg-color: white;
+    --outline-color: rgb(195, 195, 195);
+    --text-color: black;
+    --color1: blueviolet;
+    --color2: purple;
+    --color3: pink;
+    --color4: rgb(0, 122, 122);
+}
+button {
+    padding: 8px 12px;
+    background-color: var(--color3);
+    border-radius: 6px;
+    border: 1px solid var(--outline-color);
+}
+button a {
+    color: var(--text-color);
+}
+a {
+    text-decoration: none;
+}
+
+.nav-contents {
+    height: 175px;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+.nav-upper {
+    height: 65%;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+.nav-upper h1 {
+    font-size: 2.5rem;
+}
+.nav-lower {
+    height: 35%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--outline-color);
+    justify-content: space-around;
+}
+.nav-lower a {
+    color: var(--color4);
+    font-size: 1.4rem;
+}
+
+header {
+    background-color: var(--color3);
+    height: 320px;
+    gap: 1rem;
+}
+header h1 {
+    font-size: 3rem;
+}
+header p {
+    font-size: 1.4rem;
+}
+
+
+
+#mood-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 3rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.mood-card {
+    border-radius: 10px;
+    border: 1px solid var(--outline-color);
+    aspect-ratio: 1/1;
+    width: 350px;
+    padding: 1.5rem;
+    align-items: start;
+    justify-content: space-between;
+}
+.mood-card .title {
+    font-size: 1.5rem;
+}
+.mood-card .icon-window {
+    height: 55%;
+    width: 100%;
+    background-color: rgb(151, 196, 255);
+    border-radius: 10px;
+}
+.mood-card .icon {
+    font-size: 5rem;
+}
+
+footer {
+    background-color: var(--color3);
+    height: 120px;
+    text-align: center;
+}
