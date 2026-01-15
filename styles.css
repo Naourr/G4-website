@@ -86,7 +86,7 @@ a {
     overflow-x: scroll;
     padding: 0 1rem 0 1rem;
     scrollbar-width: thin;
-    scrollbar-color: var(--color1) var(--bg-color);
+    scrollbar-color: var(--outline-color) var(--bg-color);
 }
 .nav-lower a {
     color: var(--color2);
@@ -103,6 +103,7 @@ header {
     gap: 1rem;
 }
 .banner {
+    background-color: var(--color1);
     background-image: url(assets/images/placeholder-image2.jpg);
     background-size: cover;
     background-position: center;
@@ -194,8 +195,27 @@ footer {
     background-color: var(--color1);
     height: 120px;
     text-align: center;
+    padding: 0 2rem;
 }
 
+
+
+/* styling for pages start */
+
+header .textbox-banner {
+    background-color: var(--color1);
+    width: 100%;
+    padding: 5rem 2rem;
+    gap: 10px;
+    text-align: center;
+}
+header .textbox-banner h1 {
+    font-size: 2.8rem;
+}
+header .textbox-banner p {
+    font-size: 1.3rem;
+}
+/* styling for pages end */
 
 @media screen and (max-width: 750px) {
     .home-btn {
