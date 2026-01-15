@@ -5,6 +5,7 @@
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
 }
 body {
     overflow-x: hidden;
@@ -25,19 +26,25 @@ body {
     --bg-color: white;
     --outline-color: rgb(195, 195, 195);
     --text-color: black;
-    --color1: blueviolet;
-    --color2: purple;
-    --color3: pink;
-    --color4: rgb(0, 122, 122);
+    --color1: pink;
+    --color2: rgb(0, 122, 122);
+    --color3: rgb(255, 161, 176);
 }
 
 
 
 button {
     padding: 8px 12px;
-    background-color: var(--color3);
+    background-color: var(--color1);
     border-radius: 6px;
     border: 1px solid var(--outline-color);
+}
+button:hover {
+    padding: 8px 12px;
+    background-color: var(--color3);
+    border-radius: 6px;
+    border: 1px solid var(--color1);
+    scale: 1.05;
 }
 button a {
     color: var(--text-color);
@@ -63,6 +70,9 @@ a {
     left: 50px;
     margin-right: auto;
 }
+.home-btn:hover {
+    scale: 1.1;
+}
 .nav-upper h1 {
     font-size: 2.5rem;
 }
@@ -76,11 +86,14 @@ a {
     overflow-x: scroll;
     padding: 0 1rem 0 1rem;
     scrollbar-width: thin;
-    scrollbar-color: var(--color3) var(--bg-color);
+    scrollbar-color: var(--color1) var(--bg-color);
 }
 .nav-lower a {
-    color: var(--color4);
+    color: var(--color2);
     font-size: 1.4rem;
+}
+.nav-lower a:hover {
+    color: var(--color1);
 }
 
 
@@ -137,7 +150,7 @@ header .textbox p {
 .species-card .picture-window {
     height: 55%;
     width: 100%;
-    background-color: var(--color3);
+    background-color: var(--color1);
     border-radius: 10px;
 }
 
@@ -178,7 +191,7 @@ header .textbox p {
 
 
 footer {
-    background-color: var(--color3);
+    background-color: var(--color1);
     height: 120px;
     text-align: center;
 }
