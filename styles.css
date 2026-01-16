@@ -45,7 +45,7 @@ a button {
     transition: all 0.3s ease;
     color: var(--text-color);
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 a button:hover { 
     background-color: var(--color2);
@@ -54,7 +54,7 @@ a button:hover {
 }
 a {
     text-decoration: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 
@@ -116,7 +116,7 @@ header {
     width: 100%;
 }
 header .textbox {
-    padding: 3rem 2rem 2rem 1rem;
+    padding: 3rem;
     gap: 10px;
     text-align: center;
 }
@@ -182,13 +182,13 @@ header .textbox p {
 /* pictures for each species-card start */
 
 #mammals .picture-window {
-    background-image: url(assets/images//amphibians/axolot.jpg);
+    background-image: url(assets/images/mammals/dog.webp);
     background-size: cover;
     background-position: center;
 }
 
 #birds .picture-window {
-    background-image: url(assets/images//amphibians/axolot.jpg);
+    background-image: url(assets/images/birds/eagle.avif);
     background-size: cover;
     background-position: center;
 }
@@ -206,7 +206,7 @@ header .textbox p {
 }
 
 #fish .picture-window {
-    background-image: url(assets/images//amphibians/axolot.jpg);
+    background-image: url(assets/images/fish/pufferfish.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -336,10 +336,10 @@ header .textbox-banner p {
 }
 .card-link {
     position: absolute;
-    top: 0;
+    /* top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
+    width: 100%; */
     inset: 0;
     z-index: 1;
 }
