@@ -194,13 +194,13 @@ header .textbox p {
 }
 
 #reptiles .picture-window {
-    background-image: url(assets/images//amphibians/axolot.jpg);
+    background-image: url(assets/images/reptiles/Leopard\ Gecko.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #amphibians .picture-window {
-    background-image: url(assets/images//amphibians/axolot.jpg);
+    background-image: url(assets/images/amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
