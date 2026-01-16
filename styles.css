@@ -25,10 +25,9 @@ body {
 :root {
     --bg-color: white;
     --outline-color: rgb(195, 195, 195);
-    --text-color: black;
-    --color1: pink;
-    --color2: rgb(0, 122, 122);
-    --color3: rgb(255, 161, 176);
+    --text-color: white;
+    --color1: rgb(0, 122, 122);
+    --color2: rgb(0, 175, 175);
 }
 
 
@@ -36,15 +35,14 @@ body {
 button {
     padding: 8px 12px;
     background-color: var(--color1);
-    border-radius: 6px;
-    border: 1px solid var(--outline-color);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
 }
-button:hover {
-    padding: 8px 12px;
-    background-color: var(--color3);
-    border-radius: 6px;
-    border: 1px solid var(--color1);
-    scale: 1.05;
+button:hover { 
+    background-color: var(--color2);
+    scale: 1.1;
+    transition: all 0.3s ease;
 }
 button a {
     color: var(--text-color);
@@ -69,9 +67,11 @@ a {
     top: 42px;
     left: 50px;
     margin-right: auto;
+    transition: all 0.3s ease;
 }
 .home-btn:hover {
     scale: 1.1;
+    transition: all 0.3s ease;
 }
 .nav-upper h1 {
     font-size: 2.5rem;
@@ -89,7 +89,7 @@ a {
     scrollbar-color: var(--outline-color) var(--bg-color);
 }
 .nav-lower a {
-    color: var(--color2);
+    color: var(--color1);
     font-size: 1.4rem;
 }
 .nav-lower a:hover {
@@ -126,61 +126,80 @@ header .textbox p {
 
 #species-board {
     display: grid;
-    place-items: center;
-    padding: 3rem;
-    gap: 3rem;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 2rem 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .species-card {
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1px solid var(--outline-color);
-    aspect-ratio: 1/1;
-    width: 365px;
-    padding: 1.5rem;
+    min-height: 365px;
+    min-width: 300px;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.species-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.species-card .textbox {
+    height: 40%;
+    width: 100%;
+    padding: 1.4rem;
+    gap: 12px;
     align-items: start;
     justify-content: space-between;
-    box-shadow: 0 0 15px var(--outline-color);
+    height: fit-content;
 }
 .species-card .title {
     font-size: 1.5rem;
+    color: var(--color1);
+}
+.species-card .description {
+    font-size: 0.95rem;
+    color: #555;
 }
 .species-card .picture-window {
-    height: 55%;
+    height: 60%;
     width: 100%;
     background-color: var(--color1);
-    border-radius: 10px;
 }
+
+
 
 /* pictures for each species-card start */
 
 #mammals .picture-window {
-    background-image: url(assets/images/placeholder-image1.jpg);
+    background-image: url(assets/images//amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #birds .picture-window {
-    background-image: url(assets/images/placeholder-image1.jpg);
+    background-image: url(assets/images//amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #reptiles .picture-window {
-    background-image: url(assets/images/placeholder-image1.jpg);
+    background-image: url(assets/images//amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #amphibians .picture-window {
-    background-image: url(assets/images/placeholder-image1.jpg);
+    background-image: url(assets/images//amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #fish .picture-window {
-    background-image: url(assets/images/placeholder-image1.jpg);
+    background-image: url(assets/images//amphibians/axolot.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -194,6 +213,7 @@ footer {
     height: 120px;
     text-align: center;
     padding: 0 2rem;
+    color: var(--text-color);
 }
 
 
@@ -206,6 +226,9 @@ header .textbox-banner {
     padding: 5rem 2rem;
     gap: 10px;
     text-align: center;
+}
+header .textbox-banner * {
+    color: var(--text-color);
 }
 header .textbox-banner h1 {
     font-size: 2.8rem;
@@ -235,12 +258,12 @@ header .textbox-banner p {
     }
 }
 @media screen and (max-width: 460px) {
-    #species-board {
+    /* #species-board {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .species-card {
         width: 350px;
-    }
+    } */
 }
 
 /* Page Style*/
@@ -251,6 +274,9 @@ header .textbox-banner p {
   text-align: center;
   padding: 20px;
   font-size: 1.5rem;
+}
+.featured-animal h2 {
+    margin: 2.5rem;
 }
 
 .featured-card {
@@ -283,7 +309,7 @@ header .textbox-banner p {
 
 .featured-card h3 {
   margin: 0 0 15px;
-  color: var(--color2);
+  color: var(--color1);
   font-size: 1.8rem;
 }
 
@@ -296,6 +322,7 @@ header .textbox-banner p {
 .animal-list {
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .animal-list h2 {
@@ -336,7 +363,7 @@ header .textbox-banner p {
 .animal-card h3 {
   margin: 20px 15px 10px;
   font-size: 1.4rem;
-  color: var(--color2);
+  color: var(--color1);
 }
 
 .animal-card p {
@@ -354,3 +381,4 @@ header .textbox-banner p {
   .featured-card img {
     width: 100%;
   }
+}
