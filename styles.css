@@ -247,8 +247,10 @@ header .textbox-banner p {
 
 .featured-animal {
   max-width: 1000px;
-  margin: 10 auto 50px;
+  margin: 0 auto 50px;
   text-align: center;
+  padding: 10px;
+
 }
 
 .featured-card {
