@@ -44,11 +44,12 @@ button:hover {
     scale: 1.1;
     transition: all 0.3s ease;
 }
-button a {
+a button {
     color: var(--text-color);
 }
 a {
     text-decoration: none;
+    z-index: 0;
 }
 
 
@@ -93,7 +94,7 @@ a {
     font-size: 1.4rem;
 }
 .nav-lower a:hover {
-    color: var(--color1);
+    color: var(--color2);
 }
 
 
@@ -134,6 +135,7 @@ header .textbox p {
 }
 
 .species-card {
+    background-color: var(--bg-color);
     border-radius: 16px;
     border: 1px solid var(--outline-color);
     min-height: 365px;
@@ -142,21 +144,24 @@ header .textbox p {
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+
 }
 .species-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
+
 .species-card .textbox {
     height: 40%;
     width: 100%;
     padding: 1.4rem;
-    gap: 12px;
+    gap: 1rem;
     align-items: start;
     justify-content: space-between;
     height: fit-content;
 }
-.species-card .title {
+.species-card h3 {
     font-size: 1.5rem;
     color: var(--color1);
 }
@@ -169,7 +174,13 @@ header .textbox p {
     width: 100%;
     background-color: var(--color1);
 }
-
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 
 
 /* pictures for each species-card start */
@@ -347,6 +358,8 @@ header .textbox-banner p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   border: 1px solid var(--outline-color);
+  height: fit-content;
+  min-height: 400px;
 }
 
 .animal-card:hover {
@@ -371,6 +384,10 @@ header .textbox-banner p {
   margin: 0;
   color: #555;
   font-size: 1rem;
+}
+
+.animal-card button {
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
