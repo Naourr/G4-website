@@ -37,24 +37,22 @@ body {
 
 
 
-button {
+a button {
     padding: 8px 12px;
     background-color: var(--color1);
     border-radius: 10px;
     border: none;
     transition: all 0.3s ease;
+    color: var(--text-color);
 }
-button:hover { 
+a button:hover { 
     background-color: var(--color2);
     scale: 1.1;
     transition: all 0.3s ease;
 }
-a button {
-    color: var(--text-color);
-}
 a {
     text-decoration: none;
-    z-index: 0;
+    z-index: 100;
 }
 
 
@@ -315,6 +313,7 @@ header .textbox-banner p {
   border: 1px solid var(--outline-color);
   height: fit-content;
   min-height: 400px;
+  position: relative;
 }
 .animal-card:hover {
   transform: translateY(-12px);
